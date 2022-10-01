@@ -2,12 +2,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class gui implements ActionListener {
+public class game implements ActionListener {
     private int clicks = 0;
     private JLabel label = new JLabel("Number of clicks:  0");
     private JFrame frame = new JFrame();
 
-    public gui() {
+    public game() {
 
         JButton button = new JButton("Click Me");
         button.addActionListener(this);
@@ -20,7 +20,7 @@ public class gui implements ActionListener {
 
         frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("gui");
+        frame.setTitle("Clicker Game");
         frame.pack();
         frame.setVisible(true);
     }
@@ -31,6 +31,6 @@ public class gui implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new gui();
+        new game();
     }
 }
